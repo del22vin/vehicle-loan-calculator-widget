@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <!--<link id="HousingLoanCalculatorCss" href="../Themes/Bluehorizon.css" rel="stylesheet" type="text/css">-->
+</head>
+<body>
+
+    <div id="VehicleLoanCalculatorContainer"><div id="calculatorLoad"></div><div id="loadMsg">Loading Vehicle Calculator...</div></div>
+
+    <!--include this-->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+    <!--include this-->
+    <script src="scripts/ClientLibrary-1.2.0.js"></script>
+
+
+    <script type="text/javascript">
+        window.onload = function(e){
+            //include this
+            $("#VehicleLoanCalculatorContainer").HousingLoanCalculator({
+                amountOfLoan: 800000,
+                theme: "redroyale",
+                width: 520,
+                defaultPaymentTerms: 60,
+                lockPaymentTerms: false,
+                hidePaymentTerms: false,
+                defaultBank: "BPI",
+                lockBank: false,
+                hideBank: false,
+                defaultDownpayment: 20,
+                lockDownpayment: false,
+                hideDownpayment: false,
+                hideMarketing: false
+            });
+
+        }
+
+    </script>
+</body>
+</html>
